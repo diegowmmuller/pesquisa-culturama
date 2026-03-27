@@ -14,24 +14,32 @@
 			<form action="" method="get">
 				<!-- dados pessoais -->
 
-				<!-- <fieldset>
+				<fieldset>
 					<legend>Dados Pessoais</legend>
 					<label for="userName">Nome</label>
-					<input type="text" name="userName" required />
+					<input type="text" name="userName" id="userName" required />
 					<br />
 					<label for="userAge">Idade</label>
-					<input type="number" name="userAge" min="12" max="100" required />
+					<input
+						type="number"
+						name="userAge"
+						id="userAge"
+						min="12"
+						max="100"
+						required
+					/>
 					<br />
 					<label for="birthDate">Data de nascimento</label>
-					<input type="date" name="birthDate" />
+					<input type="date" name="birthDate" id="birthDate" />
 					<br />
 					<label for="userEmail">Email</label>
-					<input type="email" name="userEmail" required />
+					<input type="email" name="userEmail" id="userEmail" required />
 					<br />
 					<label for="userPhoneNumber">Telefone</label>
 					<input
 						type="tel"
 						name="userPhoneNumber"
+						id="userPhoneNumber"
 						pattern="[0-9]{11}"
 						placeholder="11111111111"
 						required
@@ -41,7 +49,7 @@
 					<label for="userImage">Upload de foto</label>
 					<input type="file" accept="image/*" name="userImage" />
 					<br />
-				</fieldset> 
+				</fieldset>
 				<fieldset>
 					<legend>Perfil</legend>
 					<p>Gênero</p>
@@ -55,7 +63,7 @@
 					<label for="userGender">Outro</label>
 					<br />
 					<label for="maritalStatus">Estado civil</label>
-					<select name="maritalStatus">
+					<select name="maritalStatus" id="maritalStatus">
 						<option value="naoInformado">Não informado</option>
 						<option value="casado">Casado</option>
 						<option value="solteiro">Solteiro</option>
@@ -63,7 +71,7 @@
 						<option value="uniaoEstavel">União estável</option>
 					</select>
 					<label for="userState">Estado</label>
-					<select name="userState" required>
+					<select name="userState" id="userState" required>
 						<option value="AC">Acre</option>
 						<option value="AL">Alagoas</option>
 						<option value="AP">Amapá</option>
@@ -94,8 +102,8 @@
 					</select>
 					<br />
 					<label for="userCity">Cidade</label>
-					<input type="text" name="userCity" id="" />
-				</fieldset> -->
+					<input type="text" name="userCity" id="userCity" />
+				</fieldset>
 
 				<fieldset>
 					<legend>Hábitos</legend>
@@ -112,6 +120,21 @@
 					<input type="checkbox" name="social" value="x" />
 					<label for="social">X</label>
 					<br />
+
+					<label for="musicStyle">Estilo musical</label>
+					<input
+						type="text"
+						name="userMusicStyle"
+						id="musicStyle"
+						list="styleTypes"
+					/>
+					<datalist id="styleTypes">
+						<option value="rock"></option>
+						<option value="samba"></option>
+						<option value="pagode"></option>
+						<option value="jazz"></option>
+						<option value="mpb"></option>
+					</datalist>
 				</fieldset>
 
 				<button type="submit">Enviar</button>
